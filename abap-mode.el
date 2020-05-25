@@ -35,7 +35,7 @@
 ;;; Dev Log
 ;; DONE Only when * is in the begining of the line should the line be comment line!
 
-;; define keywords 
+;; define keywords
 ;; ABAP keywords
 ;; Refer to https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_statements_overview.htm
 (require 'abap-indention)
@@ -346,7 +346,7 @@
         "WITH" "DEFAULT" "UNIQUE" "KEY"
         "TRANSPORTING" "NO FIELDS"
         "STANDARD" "SORTED" "HASHED" "TABLE"
-        "PUBLIC" "FINAL" "CREATE PUBLIC" "CREATE PRIVATE" "RASING" 
+        "PUBLIC" "FINAL" "CREATE PUBLIC" "CREATE PRIVATE" "RASING"
         ))
 
 ;; (setq abap-keywords '("REPORT" "DATA" "DATA:" "TYPE" "REF" "TYPES" "TABLES" "AT" "BEGIN" "OF" "TIMES" "PERFORM" "APPEND" "CLEAR" "TO" "CALL" "FUNCTION" "EXPORTING" "EXCEPTIONS" "SELECT" "UP" "FROM" "INTO" "CORRESPONDING" "FIELDS" "TABLE" "GT" "LT" "EQ" "LE" "GE" "INSERT" "INTO" "MODIFY" "WHEN" "USING" "LIKE" "CHANGING" "TYPE-POOLS" "ROWS" "INITIAL" "SIZE" "WITH" "HEADER" "LINE" "LINES" "WRITE" "ASSIGNING" "READ" "IMPORT" "EXPORT"  "IMPORTING" "PUBLIC" "FINAL" "DEFINITION" "CREATE PUBLIC" "PUBLIC SECTION" "CLASS-METHODS" "PROTECTED SECTION" "PRIVATE SECTION" "METHODS" "CONSTANTS" "VALUE" "NOT" "IS" "BOUND" "IMPLEMENTATION" "CHECK"))
