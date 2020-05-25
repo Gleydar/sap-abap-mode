@@ -81,11 +81,13 @@
         "CLASS-METHODS"
         "EVENTS"
         "INTERFACE"
+        "ENDINTERFACE"
         "INTERFACES"
         "METHODS"
         "PRIVATE SECTION"
         "PROTECTED SECTION"
         "PUBLIC SECTION"
+        "INHERITING FROM"
         ;;; Object Creation
         "CREATE DATA"
         "CREATE OBJECT"
