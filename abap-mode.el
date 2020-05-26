@@ -88,9 +88,12 @@
         "PROTECTED SECTION"
         "PUBLIC SECTION"
         "INHERITING FROM"
+        "REDEFINITION"
         ;;; Object Creation
         "CREATE DATA"
         "CREATE OBJECT"
+        "NEW"
+        "CAST"
 
         ;; Calling and Exiting Program Units
         ;;; Calling Programs
@@ -334,7 +337,7 @@
         "FIELD-SYMBOL"
         "ASSIGNING"
         "EQ" "LE" "LT" "GT" "GE" "NE"
-        "IS" "INITIAL" "BOUND" "FOUND"
+        "IS" "INITIAL" "BOUND" "FOUND" "INSTANCE OF"
         "AND" "OR" "NOT" "IN"
         "USING" "CHANGING"
         "VALUE" "INTO" "SINGLE"
