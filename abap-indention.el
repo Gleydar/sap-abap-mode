@@ -91,14 +91,60 @@
         )
       )))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; TODOs
+;; - indentation of 'public section', 'protected section', 'private section'
+;; - indentation of statements over multiple lines
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (defun abap-indent-line ()
   "Indent ABAP Line"
-  (unless (abap-is-comment-line)
-    (let ((width tab-width)
-          (indent (abap-calc-indent)))
-      ;; (save-excursion
-      (abap-delete-leading-space)
-      (indent-to indent))))
+  (interactive)
+  (beginning-of-line)
+  ; first line is always not indented
+  (if (bobp)
+    (indent-line-to 0)
+  ; else
+  (let ((not-indented t) cur-indent)
+  ; look for closing keywords
+  (back-to-indentation)
+    (if (looking-at (regexp-opt abap--keywords-close 'words))
+      (progn
+      (save-excursion
+        (forward-line -1)
+        (while (abap-is-empty-line)
+          (forward-line -1))
+        (setq cur-indent (- (current-indentation) tab-width)))
+      (if (< cur-indent 0) ; we can't indent past the left margin
+        (setq cur-indent 0)))
+    ; else
+    (save-excursion
+      (while not-indented ; iterate backwards until we find an indentation hint
+        (forward-line -1)
+        (back-to-indentation)
+        ; look whether previous line starts with a closing keyword
+        (if (looking-at (regexp-opt abap--keywords-close 'words))
+          (progn
+            (setq cur-indent (current-indentation))
+            (setq not-indented nil))
+          ; else look whether previous line starts with an opening keyword
+          (if (looking-at (regexp-opt abap--keywords-open 'words))
+            (progn
+              (setq cur-indent (+ (current-indentation) tab-width))
+              (setq not-indented nil))
+          (if (bobp)
+            (setq not-indented nil)))))))
+    (if cur-indent
+      (indent-line-to cur-indent)
+    (indent-line-to 0)))) ; if we didn't see an indentation hint
+
+  ;; (unless (abap-is-comment-line)
+  ;;   (let ((width tab-width)
+  ;;         (indent (abap-calc-indent)))
+  ;;     ;; (save-excursion
+  ;;     (abap-delete-leading-space)
+  ;;     (indent-to indent))))
+  )
 
 
 (provide 'abap-indention)
