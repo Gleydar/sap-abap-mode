@@ -45,8 +45,10 @@
   "Check space line"
   ;; (beginning-of-line)
   (save-excursion
-    (back-to-indentation)
-    (looking-at "$")))
+    ;; (back-to-indentation)
+    ;; (looking-at "$")))
+    (beginning-of-line)
+    (looking-at-p "[[:space:]]*$")))
 
 (defun abap-is-comment-line()
   (save-excursion
