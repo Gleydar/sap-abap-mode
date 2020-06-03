@@ -1,9 +1,11 @@
-;;; abap-indention.el --- Indention functions    -*- lexical-binding: t; -*-
+;;; abap-indention.el --- Indentation functions    -*- lexical-binding: t; -*-
 
+;; Copyright (C) 2020  Marian Piatkowski
 ;; Copyright (C) 2018  Marvin Qian
 
+;; Author: Marian Piatkowski <marianpiatkowski@web.de>
 ;; Author: Marvin Qian <qianmarv@gmail.com>
-;; Keywords: abap-mode
+;; Keywords: ABAP indentation, Emacs
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

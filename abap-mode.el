@@ -1,9 +1,11 @@
-;;; abap-indention.el --- Indention functions    -*- lexical-binding: t; -*-
+;;; abap-mode.el --- ABAP Major Mode    -*- lexical-binding: t; -*-
 
+;; Copyright (C) 2020  Marian Piatkowski
 ;; Copyright (C) 2018  Marvin Qian
 
+;; Author: Marian Piatkowski <marianpiatkowski@web.de>
 ;; Author: Marvin Qian <qianmarv@gmail.com>
-;; Keywords: SAP ABAP
+;; Keywords: SAP ABAP Mode, Emacs
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
