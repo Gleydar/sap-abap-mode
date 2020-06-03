@@ -127,18 +127,20 @@
       (while not-indented ; iterate backwards until we find an indentation hint
         (forward-line -1)
         (back-to-indentation)
-        ; look whether previous line starts with a closing keyword
-        (if (looking-at (regexp-opt abap--keywords-close 'words))
+        ; look whether previous line starts with an opening keyword
+        (if (looking-at (regexp-opt abap--keywords-open 'words))
           (progn
-            (setq cur-indent (current-indentation))
+            (setq cur-indent (+ (current-indentation) tab-width))
             (setq not-indented nil))
-          ; else look whether previous line starts with an opening keyword
-          (if (looking-at (regexp-opt abap--keywords-open 'words))
+          ; otherwise look whether line is non-empty
+          (if (not (abap-is-empty-line))
             (progn
-              (setq cur-indent (+ (current-indentation) tab-width))
+              (setq cur-indent (current-indentation))
               (setq not-indented nil))
-          (if (bobp)
-            (setq not-indented nil)))))))
+            ; break if we are at the first line
+            (if (bobp)
+              (setq not-indented nil))))
+        )))
     (if cur-indent
       (indent-line-to cur-indent)
     (indent-line-to 0)))) ; if we didn't see an indentation hint
