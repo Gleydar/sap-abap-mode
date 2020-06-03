@@ -116,7 +116,10 @@
           (forward-line -1)
           (while (abap-is-empty-line)
             (forward-line -1))
-          (setq cur-indent (- (current-indentation) tab-width))) ; end save-excursion
+          (back-to-indentation)
+          (if (looking-at (regexp-opt abap--keywords-open 'words))
+            (setq cur-indent (current-indentation))
+            (setq cur-indent (- (current-indentation) tab-width)))) ; end save-excursion
         (if (< cur-indent 0) ; we can't indent past the left margin
             (setq cur-indent 0))) ; end progn
     ; else
