@@ -108,17 +108,17 @@
     (indent-line-to 0)
   ; else
   (let ((not-indented t) cur-indent)
-  ; look for closing keywords
-  (back-to-indentation)
+    ; look for closing keywords
+    (back-to-indentation)
     (if (looking-at (regexp-opt abap--keywords-close 'words))
       (progn
-      (save-excursion
-        (forward-line -1)
-        (while (abap-is-empty-line)
-          (forward-line -1))
-        (setq cur-indent (- (current-indentation) tab-width)))
-      (if (< cur-indent 0) ; we can't indent past the left margin
-        (setq cur-indent 0)))
+        (save-excursion
+          (forward-line -1)
+          (while (abap-is-empty-line)
+            (forward-line -1))
+          (setq cur-indent (- (current-indentation) tab-width))) ; end save-excursion
+        (if (< cur-indent 0) ; we can't indent past the left margin
+            (setq cur-indent 0))) ; end progn
     ; else
     (save-excursion
       (while not-indented ; iterate backwards until we find an indentation hint
