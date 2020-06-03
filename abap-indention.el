@@ -94,9 +94,8 @@
       )))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; TODOs
-;; - indentation of 'public section', 'protected section', 'private section'
-;; - indentation of statements over multiple lines
+;; NOTES
+;; - indentation of statements over multiple lines may have to be done manually
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun abap-indent-line ()
@@ -108,9 +107,10 @@
     (indent-line-to 0)
   ; else
   (let ((not-indented t) cur-indent)
-    ; look for closing keywords
     (back-to-indentation)
-    (if (looking-at (regexp-opt abap--keywords-close 'words))
+    ; look for closing keywords or visibility attributes
+    (if (or (looking-at (regexp-opt abap--keywords-close 'words))
+            (looking-at (regexp-opt '("PUBLIC SECTION" "PROTECTED SECTION" "PRIVATE SECTION") 'words)))
       (progn
         (save-excursion
           (forward-line -1)
@@ -132,8 +132,9 @@
           (progn
             (setq cur-indent (+ (current-indentation) tab-width))
             (setq not-indented nil))
-          ; otherwise look whether line is non-empty
-          (if (not (abap-is-empty-line))
+          ; otherwise look whether line is non-empty and does not contain any visibility attributes
+          (if (and (not (abap-is-empty-line))
+                   (not (looking-at (regexp-opt '("PUBLIC SECTION" "PROTECTED SECTION" "PRIVATE SECTION") 'words))))
             (progn
               (setq cur-indent (current-indentation))
               (setq not-indented nil))
