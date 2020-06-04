@@ -41,6 +41,7 @@
 ;; ABAP keywords
 ;; Refer to https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_statements_overview.htm
 (require 'abap-indention)
+(defvar abap-mode-hook nil)
 
 (setq abap-keywords
       '(
@@ -419,6 +420,7 @@
 
   ;; (setq-local comment-start "*")
   ;; (setq-local comment-style "plain")
+  (run-hooks 'abap-mode-hook)
 
   )
 
