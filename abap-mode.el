@@ -199,6 +199,7 @@
         "SELECT"
         "ENDSELECT"
         "UPDATE"
+        "UP TO"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC"
         ;;; ABAP and HANA
