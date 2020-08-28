@@ -200,6 +200,7 @@
         "ENDSELECT"
         "UPDATE"
         "UP TO"
+        "LIKE"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC"
         ;;; ABAP and HANA
@@ -365,7 +366,7 @@
 
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL") )
 (setq abap-constants '("SPACE" "SY-" "ABAP_FALSE" "ABAP_TRUE"))
-(setq abap-events    '("START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION"))
+(setq abap-events    '("START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
 (setq abap-functions '("STRLEN" "CONCATENATE" "SPLIT" ))
 
 ;; Generate regex string for each category
