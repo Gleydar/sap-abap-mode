@@ -26,9 +26,9 @@
 
 ;;; Code:
 
-(setq abap--keywords-open '("IF" "ELSE" "LOOP" "DO" "FORM" "CASE" "CLASS" "TRY" "METHOD" "BEGIN OF"))
+(setq abap--keywords-open '("IF" "ELSE" "LOOP" "DO" "FORM" "CASE" "CLASS" "TRY" "METHOD" "BEGIN OF" "SELECT"))
 
-(setq abap--keywords-close '("ENDIF" "ENDCLASS" "ENDMETHOD" "ENDTRY" "END" "ENDLOOP" "ENDFORM" "ENDCASE" "ENDDO" "END OF"))
+(setq abap--keywords-close '("ENDIF" "ENDCLASS" "ENDMETHOD" "ENDTRY" "END" "ENDLOOP" "ENDFORM" "ENDCASE" "ENDDO" "END OF" "ENDSELECT"))
 
 
 (defun abap-delete-leading-space()

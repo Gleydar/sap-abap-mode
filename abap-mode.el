@@ -181,6 +181,7 @@
         "MODIFY"
         "READ TABLE"
         "REPLACE IN TABLE"
+        "TABLE OF" "LINE OF"
         "SORT"
         "SUM"
         ;;; Meshes
@@ -347,7 +348,7 @@
         "USING" "CHANGING"
         "VALUE" "INTO" "SINGLE"
         "WHERE" "ORDER BY" "ASCENDING" "DESCENDING" "HAVING"
-        "TYPE" "OF" "LENGTH" "REF" "TO" "BY"
+        "TYPE" "LENGTH" "REF" "TO" "BY"
         "IMPLEMENTATION" "DEFINITION" "DEFERRED"
         "EXPORTING" "IMPORTING" "RETURNING" "OPTIONAL" "EXCEPTIONS"
         "BEGIN OF" "END OF" "OCCURS"
