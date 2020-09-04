@@ -107,7 +107,7 @@
         "CALL FUNCTION"
         "CALL METHOD"
         "PERFORM"
-        "FORM"
+        "FORM" "ENDFORM"
         "RAISE EVENT"
         "SET HANDLER"
         "SET USER-COMMAND"
