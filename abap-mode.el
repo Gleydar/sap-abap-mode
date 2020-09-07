@@ -203,6 +203,8 @@
         "UPDATE"
         "UP TO"
         "LIKE"
+        "INNER JOIN" "LEFT OUTER JOIN" "RIGHT OUTER JOIN"
+        "UNION" "UNION ALL" "UNION DISTINCT"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC"
         ;;; ABAP and HANA
@@ -348,8 +350,8 @@
         "AND" "OR" "NOT" "IN"
         "USING" "CHANGING"
         "VALUE" "INTO" "SINGLE"
-        "WHERE" "ORDER BY" "ASCENDING" "DESCENDING" "HAVING"
-        "TYPE" "LENGTH" "REF" "TO" "BY"
+        "WHERE" "ORDER BY" "ASCENDING" "DESCENDING" "GROUP BY" "HAVING"
+        "TYPE" "LENGTH" "REF TO" "BY"
         "IMPLEMENTATION" "DEFINITION" "DEFERRED"
         "EXPORTING" "IMPORTING" "RETURNING" "OPTIONAL" "EXCEPTIONS"
         "BEGIN OF" "END OF" "OCCURS"
