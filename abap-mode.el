@@ -182,7 +182,7 @@
         "MODIFY"
         "READ TABLE"
         "REPLACE IN TABLE"
-        "TABLE OF" "LINE OF"
+        "TABLE OF" "LINE OF" "RANGE OF"
         "SORT"
         "SUM"
         ;;; Meshes
