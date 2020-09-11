@@ -123,7 +123,7 @@
         ;; Program Flow Logic
         ;;; Control Structure
         "DO" "ENDDO"
-        "CASE" "WHEN" "ENDCASE"
+        "CASE" "WHEN" "THEN" "ENDCASE"
         "CASE TYPE OF" "WHEN TYPE" "ENDCASE"
         "IF" "ELSEIF" "ELSE" "ENDIF"
         "WHILE" "ENDWHILE"
@@ -203,8 +203,9 @@
         "UPDATE"
         "UP TO"
         "LIKE"
-        "INNER JOIN" "LEFT OUTER JOIN" "RIGHT OUTER JOIN"
+        "INNER JOIN" "LEFT OUTER JOIN" "RIGHT OUTER JOIN" "ON"
         "UNION" "UNION ALL" "UNION DISTINCT"
+        "IS NULL" "NOT NULL"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC"
         ;;; ABAP and HANA
