@@ -141,7 +141,7 @@
         ;;; Setting References
         "ASSIGN"
         "UNASSIGN"
-        "GET REFERENCE"
+        "GET REFERENCE OF" "REF"
         ;;; Initizalization
         "CLEAR"
         "FREE"
@@ -153,7 +153,6 @@
         "MULTIPLY"
         "SUBTRACT"
         ;;; Character String and Byte String Processing
-        "CONCATENATE"
         "CONDENSE"
         "CONVERT"
         "FIND"
@@ -165,6 +164,8 @@
         "SPLIT"
         "TRANSLATE"
         "WRITE TO"
+        "SEPARATED BY" "RESPECTING BLANKS"
+        "IN CHARACTER MODE" "IN BYTE MODE"
         ;;; Date and Time Processing
         "CONVERT INTO TIME STAMP"
         "CONVERT TIME STAMP"
@@ -188,7 +189,7 @@
         ;;; Meshes
         "SET ASSOCIATION"
         ;;; Attributes of Data Objects
-        "DESCRIBE"
+        "DESCRIBE" "DESCRIBE FIELD" "DESCRIBE DISTANCE"
 
         ;; Processing External Data
         ;;; Open SQL
@@ -302,7 +303,7 @@
         "SELECT-OPTIONS"
         ;;; List
         "BACK"
-        "DESCRIBE LIST"
+        "DESCRIBE LIST" "DESCRIBE TABLE"
         "FORMAT"
         "GET CURSOR"
         "HIDE"
