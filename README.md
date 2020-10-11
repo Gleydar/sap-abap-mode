@@ -3,7 +3,7 @@
 This is a fork of [qianmarv/sap-abap-mode](https://github.com/qianmarv/sap-abap-mode).
 The development of the original project has been discontinued.
 
-`sap-abap-mode` currently supports syntax highlighting and indentation[^1] of ABAP development files.
+`sap-abap-mode` currently supports syntax highlighting and indentation<sup>[1](#footnote1)</sup> of ABAP development files.
 
 ## Installation
 
@@ -16,4 +16,4 @@ Add this repository to your `load-path`:
 (add-to-list 'auto-mode-alist '("\\.\\(asprog\\|asinc\\|aclass\\)\\'" . abap-mode))
 ```
 
-[^1]: the indentation rules only cover basic statements
+<a name="footnote1">1</a>: the indentation rules only cover basic statements
