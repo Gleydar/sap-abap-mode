@@ -207,6 +207,7 @@
         "INNER JOIN" "LEFT OUTER JOIN" "RIGHT OUTER JOIN" "ON"
         "UNION" "UNION ALL" "UNION DISTINCT"
         "IS NULL" "NOT NULL"
+        "BYPASSING BUFFER"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC"
         ;;; ABAP and HANA
