@@ -52,6 +52,7 @@
         "PROGRAM"
         "REPORT"
         "TYPE-POOL"
+        "LINE-SIZE"
 
         ;; Modularization Statements
         ;;; Procedures
@@ -61,7 +62,6 @@
         "MODULE" "ENDMODULE"
         ;;; Event Blocks
         "AT LINE-SELECTION"
-        "AT SELECTION-SCREEN"
         "AT USER-COMMAND"
         "END-OF-PAGE"
         "GET"
@@ -92,6 +92,7 @@
         "PUBLIC SECTION"
         "INHERITING FROM"
         "REDEFINITION"
+        "FRIENDS"
         ;;; Object Creation
         "CREATE DATA"
         "CREATE OBJECT"
@@ -104,7 +105,9 @@
         "LEAVE TO TRANSACTION"
         "SUBMIT"
         ;;; Calling Processing Blocks
+        "CALL CUSTOMER-FUNCTION"
         "CALL FUNCTION"
+        "CALL DIALOG"
         "CALL METHOD"
         "PERFORM"
         "FORM" "ENDFORM"
@@ -137,11 +140,15 @@
         ;; Assignment
         ;;; Special Assignment
         "MOVE-CORRESPONDING"
+        "ADD-CORRESPONDING"
+        "DIVIDE-CORRESPONDING"
+        "MULTIPLY-CORRESPONDING"
+        "SUBTRACT-CORRESPONDING"
         "UNPACK"
         ;;; Setting References
         "ASSIGN"
         "UNASSIGN"
-        "GET REFERENCE OF" "REF"
+        "GET REFERENCE OF" "REF" "REFERENCE INTO"
         ;;; Initizalization
         "CLEAR"
         "FREE"
@@ -195,6 +202,7 @@
         ;;; Open SQL
         "CLOSE CURSOR"
         "DELETE"
+        "DELETE FROM"
         "FETCH NEXT CURSOR"
         "INSERT"
         "MODIFY"
@@ -209,7 +217,7 @@
         "IS NULL" "NOT NULL"
         "BYPASSING BUFFER"
         ;;; Native SQL
-        "EXEC SQL" "ENDEXEC"
+        "EXEC SQL" "ENDEXEC" "EXIT FROM SQL"
         ;;; ABAP and HANA
         "CALL DATABASE PROCEDURE"
         ;;; Secondary Database Connections
@@ -276,7 +284,6 @@
         "CALL TRANSFORMATION"
         ;;; OLE Interface
         "CALL METHOD"
-        "CREATE OBJECT"
         "FREE OBJECT"
         "GET PROPERTY"
         "SET PROPERTY"
@@ -284,6 +291,7 @@
         ;; User Dialogs
         ;;; Dynpros
         "CALL SCREEN"
+        "CALL SELECTION-SCREEN"
         "CONTROLS"
         "EXIT FROM STEP-LOOP"
         "GET CURSOR"
@@ -362,7 +370,7 @@
         "WITH" "DEFAULT KEY" "UNIQUE KEY" "NON-UNIQUE KEY" "EMPTY KEY"
         "TRANSPORTING" "NO FIELDS"
         "STANDARD" "SORTED" "HASHED" "TABLE"
-        "PUBLIC" "FINAL" "ABSTRACT" "CREATE PUBLIC" "CREATE PRIVATE" "RAISING"
+        "PUBLIC" "FINAL" "ABSTRACT" "CREATE PUBLIC" "CREATE PROTECTED" "CREATE PRIVATE" "RAISING"
         "FOR TESTING"
         "RISK LEVEL HARMLESS" "RISK LEVEL DANGEROUS" "RISK LEVEL CRITICAL"
         "DURATION SHORT" "DURATION MEDIUM" "DURATION LONG"
@@ -374,7 +382,7 @@
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL") )
 (setq abap-constants '("SPACE" "SY-" "ABAP_FALSE" "ABAP_TRUE"))
 (setq abap-events    '("START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
-(setq abap-functions '("STRLEN" "CONCATENATE" "SPLIT" ))
+(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" ))
 
 ;; Generate regex string for each category
 (setq abap-keywords-regexp  ( regexp-opt abap-keywords  'words))
