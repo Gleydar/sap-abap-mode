@@ -31,20 +31,8 @@
 (setq abap--keywords-close '("ENDIF" "ELSE" "ENDLOOP" "ENDDO" "ENDFORM" "ENDCASE" "ENDCLASS" "ENDTRY" "CATCH" "ENDMETHOD" "END OF" "ENDSELECT"))
 
 
-(defun abap-delete-leading-space()
-  " Delete leading SPACE / TAB"
-  (let ((end (progn
-               (back-to-indentation)
-               (point)))
-        (beg (progn
-               (move-beginning-of-line nil)
-               (point))))
-    (delete-region beg end)
-    )
-  )
-
 (defun abap-is-empty-line()
-  "Check space line"
+  "Check whether line is empty, whitespaces and TABs are not significant."
   ;; (beginning-of-line)
   (save-excursion
     ;; (back-to-indentation)
@@ -53,6 +41,7 @@
     (looking-at-p "[[:space:]]*$")))
 
 (defun abap-is-comment-line()
+  "Check whether line is a ABAP comment line."
   (save-excursion
     (back-to-indentation)
     (if (looking-at "\"")
@@ -60,40 +49,6 @@
       (beginning-of-line)
       (looking-at "*"))
     ))
-
-(defun abap-is-first-line()
-  (= 1 (point)))
-
-(defun abap-goto-prev-statement-line()
-  "goto previous non empty line"
-  (previous-line)
-  (if (and (not (abap-is-first-line))
-           (or (abap-is-empty-line)
-               (abap-is-comment-line)))
-      (abap-goto-prev-statement-line)
-    ))
-
-(defun abap-get-prev-line-width ()
-  "Get width of previous non empty line"
-  (save-excursion
-    (abap-goto-prev-statement-line)
-    (current-column)))
-
-(defun abap-calc-indent ()
-  "Get width of previous non empty line"
-  (save-excursion
-    (back-to-indentation)
-    ;; (beginning-of-line)
-    ;; Close
-    (let ((offset (if (looking-at (regexp-opt abap--keywords-close 'words))
-                      (* -1 tab-width)
-                    0)))
-      (abap-goto-prev-statement-line)
-      (if (looking-at (regexp-opt abap--keywords-open 'words))
-          (+ (current-column) tab-width offset)
-        (+ (current-column) offset)
-        )
-      )))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; NOTES
@@ -146,14 +101,8 @@
         )))
     (if cur-indent
       (indent-line-to cur-indent)
-    (indent-line-to 0)))) ; if we didn't see an indentation hint
-
-  ;; (unless (abap-is-comment-line)
-  ;;   (let ((width tab-width)
-  ;;         (indent (abap-calc-indent)))
-  ;;     ;; (save-excursion
-  ;;     (abap-delete-leading-space)
-  ;;     (indent-to indent))))
+    ; if we didn't see an indentation hint
+    (indent-line-to 0)))) ; end of let and if (bobp)
   )
 
 

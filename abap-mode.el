@@ -403,6 +403,7 @@
         ))
 
 (defun abap-syntax-propertize-comment(start end)
+  "Check whether line is a ABAP comment line and highlight it as such."
   (let ((case-fold-search nil))
     (goto-char start)
     (funcall
