@@ -209,7 +209,7 @@
         "OPEN CURSOR"
         "SELECT"
         "ENDSELECT"
-        "UPDATE"
+        "UPDATE" "SET"
         "UP TO"
         "LIKE"
         "INNER JOIN" "LEFT OUTER JOIN" "RIGHT OUTER JOIN" "ON"
