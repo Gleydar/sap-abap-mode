@@ -261,7 +261,6 @@
         "LOG-POINT"
         "GET RUN TIME"
         "SET RUN TIME"
-        "SET RUN TIME"
         "TEST-SEAM"
         "END-TEST-SEAM"
         "TEST-INJECTION"
