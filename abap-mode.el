@@ -415,6 +415,8 @@
 
   ;;; Syntax Table
   (modify-syntax-entry ?' "\"")
+  ;; backticks (for string literals) as a string delimiter
+  (modify-syntax-entry ?` "\"")
   (modify-syntax-entry ?_  "w")
   (modify-syntax-entry ?-  "w")
   (modify-syntax-entry ?\\ "w")
