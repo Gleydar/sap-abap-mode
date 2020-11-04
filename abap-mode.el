@@ -34,9 +34,6 @@
 
 ;;; Code:
 
-;;; Dev Log
-;; DONE Only when * is in the begining of the line should the line be comment line!
-
 ;; define keywords
 ;; ABAP keywords
 ;; Refer to https://help.sap.com/doc/abapdocu_751_index_htm/7.51/en-US/abenabap_statements_overview.htm
