@@ -376,7 +376,7 @@
 ;; (setq abap-keywords (append abap-keywords-open abap-keywords-close abap-keywords))
 
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL") )
-(setq abap-constants '("SPACE" "SY-" "ABAP_FALSE" "ABAP_TRUE"))
+(setq abap-constants '("SPACE" "ABAP_FALSE" "ABAP_TRUE"))
 (setq abap-events    '("START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
 (setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" ))
 
