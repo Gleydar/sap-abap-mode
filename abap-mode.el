@@ -196,7 +196,7 @@
         "DESCRIBE" "DESCRIBE FIELD" "DESCRIBE DISTANCE"
 
         ;; Processing External Data
-        ;;; Open SQL
+        ;;; ABAP SQL
         "CLOSE CURSOR"
         "DELETE"
         "DELETE FROM"
@@ -213,6 +213,7 @@
         "UNION" "UNION ALL" "UNION DISTINCT"
         "IS NULL" "NOT NULL"
         "BYPASSING BUFFER"
+        "INDICATORS" "SET STRUCTURE" "NOT SET STRUCTURE"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC" "EXIT FROM SQL"
         ;;; ABAP and HANA
