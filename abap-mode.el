@@ -214,6 +214,7 @@
         "IS NULL" "NOT NULL"
         "BYPASSING BUFFER"
         "INDICATORS" "SET STRUCTURE" "NOT SET STRUCTURE"
+        "INTERSECT DISTINCT" "EXCEPT DISTINCT" ;; "INTERSECT ALL" formally part of the SQL standard, but only implemented by one DB
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC" "EXIT FROM SQL"
         ;;; ABAP and HANA
