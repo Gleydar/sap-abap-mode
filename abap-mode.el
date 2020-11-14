@@ -123,7 +123,7 @@
         ;; Program Flow Logic
         ;;; Control Structure
         "DO" "ENDDO"
-        "CASE" "WHEN" "THEN" "ENDCASE"
+        "CASE" "WHEN" "WHEN OTHERS" "ENDCASE"
         "CASE TYPE OF" "WHEN TYPE" "ENDCASE"
         "IF" "ELSEIF" "ELSE" "ENDIF"
         "WHILE" "ENDWHILE"
@@ -205,10 +205,12 @@
         "MODIFY"
         "OPEN CURSOR"
         "SELECT"
+        "FIELDS"
         "ENDSELECT"
         "UPDATE" "SET"
         "UP TO"
         "LIKE"
+        "CASE" "WHEN" "THEN" "ELSE" "END"
         "INNER JOIN" "LEFT OUTER JOIN" "RIGHT OUTER JOIN" "ON"
         "UNION" "UNION ALL" "UNION DISTINCT"
         "IS NULL" "NOT NULL"
