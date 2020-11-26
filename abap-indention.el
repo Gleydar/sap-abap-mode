@@ -26,6 +26,10 @@
 
 ;;; Code:
 
+(defcustom abap-indent-level 2
+  "Indentation of ABAP statements with respect to containing block."
+  :type 'integer)
+
 (setq abap--keywords-open '("IF" "ELSE" "LOOP" "DO" "FORM" "CASE" "CLASS" "TRY" "CATCH" "METHOD" "BEGIN OF" "SELECT"))
 
 (setq abap--keywords-close '("ENDIF" "ELSE" "ENDLOOP" "ENDDO" "ENDFORM" "ENDCASE" "ENDCLASS" "ENDTRY" "CATCH" "ENDMETHOD" "END OF" "ENDSELECT"))
@@ -76,7 +80,7 @@
           (back-to-indentation)
           (if (looking-at (regexp-opt abap--keywords-open 'words))
             (setq cur-indent (current-indentation))
-            (setq cur-indent (- (current-indentation) tab-width)))) ; end save-excursion
+            (setq cur-indent (- (current-indentation) abap-indent-level)))) ; end save-excursion
         (if (< cur-indent 0) ; we can't indent past the left margin
             (setq cur-indent 0))) ; end progn
     ; else
@@ -87,7 +91,7 @@
         ; look whether previous line starts with an opening keyword
         (if (looking-at (regexp-opt abap--keywords-open 'words))
           (progn
-            (setq cur-indent (+ (current-indentation) tab-width))
+            (setq cur-indent (+ (current-indentation) abap-indent-level))
             (setq not-indented nil))
           ; otherwise look whether line is non-empty and does not contain any visibility attributes
           (if (and (not (abap-is-empty-line))
