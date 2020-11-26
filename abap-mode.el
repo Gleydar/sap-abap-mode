@@ -425,7 +425,7 @@
   (modify-syntax-entry ?-  "w")
   (modify-syntax-entry ?\\ "w")
   (modify-syntax-entry ?|  "\"")
-  ;; Comment Style of Staring with "
+  ;; Comment Style of Starting with "
   (modify-syntax-entry ?\" "<")
   (modify-syntax-entry ?\n ">")
 
