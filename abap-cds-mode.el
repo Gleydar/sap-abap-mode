@@ -23,8 +23,6 @@
 
 ;;; Code:
 
-(require 'abap-mode)
-
 (defvar abap-cds-mode-hook nil)
 
 (defcustom abap-cds-indent-level 4
