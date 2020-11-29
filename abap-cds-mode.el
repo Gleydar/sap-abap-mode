@@ -25,40 +25,6 @@
   "Check whether cursor is in comment block."
   (nth 4 (syntax-ppss)))
 
-;; (defun abap-cds-indent-line()
-;;   "Indent ABAP CDS Line"
-;;   (interactive)
-;;   (beginning-of-line)
-;;   ; first line is always not indented
-;;   (if (bobp)
-;;       (indent-line-to 0)
-;;     (let ((cur-indent 0))
-;;       (back-to-indentation)
-;;       (if (looking-at "[}]")
-;;           (progn
-;;             (save-excursion
-;;               (forward-line -1)
-;;               (while (abap-cds-is-empty-line)
-;;                 (forward-line -1))
-;;               (back-to-indentation)
-;;               (if (re-search-forward "[{]" (line-end-position) t)
-;;                   (setq cur-indent (current-indentation))
-;;                 (setq cur-indent (- (current-indentation) abap-cds-indent-level)))) ; end save-excursion
-;;             (if (< cur-indent 0) ; we cannot indent past the left margin
-;;                 (setq cur-indent 0))) ; end progn
-;;         ; else (not looking at closing block)
-;;         (save-excursion
-;;           (beginning-of-line)
-;;           (condition-case nil
-;;               (while t
-;;                 (backward-up-list 1)
-;;                 (when (looking-at "[{]")
-;;                   (setq cur-indent (+ cur-indent abap-cds-indent-level))))
-;;           (error nil))) ; end save-excursion
-;;         )
-;;       (indent-line-to cur-indent))) ; end of let and if (bobp)
-;;   )
-
 (defun abap-cds-indent-line()
   "Indent ABAP CDS Line"
   (interactive)
@@ -119,10 +85,6 @@
 
   (run-hooks 'abap-cds-mode-hook)
   )
-
-;; (add-hook 'abap-cds-mode-hook
-;;           (lambda()
-;;             (add-to-list 'electric-indent-chars ?\})))
 
 ;; add the mode to the list
 (provide 'abap-cds-mode)
