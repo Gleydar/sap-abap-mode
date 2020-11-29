@@ -86,5 +86,9 @@
   (run-hooks 'abap-cds-mode-hook)
   )
 
+;; clear memory
+(setq abap-cds-keywords nil)
+(setq abap-cds-keywords-regexp nil)
+
 ;; add the mode to the list
 (provide 'abap-cds-mode)
