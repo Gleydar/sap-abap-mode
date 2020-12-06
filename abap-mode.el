@@ -147,7 +147,6 @@
         "UNASSIGN"
         "GET REFERENCE OF" "REF" "REFERENCE INTO"
         "CORRESPONDING"
-        "MAPPING FROM ENTITY"
         ;;; Initizalization
         "CLEAR"
         "FREE"
@@ -210,7 +209,7 @@
         "FIELDS"
         "CORRESPONDING FIELDS OF"
         "ENDSELECT"
-        "UPDATE" "SET" "FOR UPDATE"
+        "UPDATE" "SET"
         "UP TO"
         "LIKE"
         "CASE" "WHEN" "THEN" "ELSE" "END"
@@ -354,6 +353,10 @@
         ;; Statements for Experts
         "INFOTYPES"
         "PROVIDE" "ENDPROVIDE"
+
+        ;; RAP
+        "TABLE FOR CREATE" "TABLE FOR UPDATE" "TABLE FOR DELETE"
+        "MAPPING FROM ENTITY"
 
         ;; Not Listed in Previous Section, But Somehow is Keyword
         ;; TODO Should be assembled in a regular expression form
