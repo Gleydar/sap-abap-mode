@@ -127,6 +127,7 @@
         "CASE TYPE OF" "WHEN TYPE" "ENDCASE"
         "IF" "ELSEIF" "ELSE" "ENDIF"
         "WHILE" "ENDWHILE"
+        "COND" "SWITCH"
         ;;; Program Interruption
         "WAIT UP TO"
         ;;; Exception Handling
