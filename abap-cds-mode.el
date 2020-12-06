@@ -25,7 +25,7 @@
 
 (defvar abap-cds-mode-hook nil)
 
-(defcustom abap-cds-indent-level 4
+(defcustom abap-cds-indent-level 2
   "Indentation of ABAP CDS with respect to containing block."
   :type 'integer)
 
@@ -64,8 +64,9 @@
 
 (setq abap-cds-keywords
       '(
-        "DEFINE" "VIEW" "SELECT" "AS" "FROM" "ASSOCIATION" "PROJECTION" "ON" "WHERE"
+        "DEFINE" "VIEW" "DEFINE TABLE" "SELECT" "AS" "FROM" "ASSOCIATION" "PROJECTION" "ON" "WHERE"
         "KEY" "REDIRECTED" "TO" "LOCALIZED" "ENTITY" "ROOT" "PARENT" "COMPOSITION CHILD" "EXTEND"
+        "INCLUDE" "NOT NULL"
         ))
 (setq abap-cds-keywords (append abap-cds-keywords (mapcar 'downcase abap-cds-keywords)))
 
