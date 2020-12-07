@@ -272,6 +272,7 @@
         ;;; Dynamic Program Development
         "GENERATE SUBROUTINE POOL"
         "INSERT REPORT"
+        "GENERATE REPORT"
         "INSERT TEXTPOOL"
         "READ REPORT"
         "READ TEXTPOOL"
