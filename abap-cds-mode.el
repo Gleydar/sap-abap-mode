@@ -64,9 +64,17 @@
 
 (setq abap-cds-keywords
       '(
-        "DEFINE" "VIEW" "DEFINE TABLE" "SELECT" "AS" "FROM" "ASSOCIATION" "PROJECTION" "ON" "WHERE"
+        "DEFINE" "VIEW" "SELECT" "AS" "FROM" "ASSOCIATION" "PROJECTION" "ON" "WHERE" "NOT NULL"
         "KEY" "REDIRECTED" "TO" "LOCALIZED" "ENTITY" "ROOT" "PARENT" "COMPOSITION CHILD" "EXTEND"
-        "INCLUDE" "NOT NULL"
+        ;; ABAP Dictionary (DDIC) - TODO maybe own major mode
+        ;; "DEFINE TABLE"
+        ;; "INCLUDE" "NOT NULL"
+        ;; RAP
+        "IMPLEMENTATION UNMANAGED" "IMPLEMENTATION MANAGED" "IMPLEMENTATION ABSTRACT" "MANAGED WITH ADDITIONAL SAVE"
+        "BEHAVIOR FOR" "LATE NUMBERING" "PERSISTENT TABLE" "LOCK MASTER" "LOCK DEPENDENT"
+        "MAPPING FOR" "CORRESPONDING"
+        "CREATE" "UPDATE" "DELETE"
+        "ACTION"
         ))
 (setq abap-cds-keywords (append abap-cds-keywords (mapcar 'downcase abap-cds-keywords)))
 
