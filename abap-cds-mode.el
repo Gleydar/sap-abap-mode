@@ -88,13 +88,13 @@
 (defvar abap-cds-mode-syntax-table
   (let ((abap-cds-mode-syntax-table (make-syntax-table)))
     ;; set \" back to non-comment syntax TODO maybe remove
-    (modify-syntax-entry ?\" "w")
-    (modify-syntax-entry ?' "\"")
-    (modify-syntax-entry ?_  "w")
+    (modify-syntax-entry ?\" "w" abap-cds-mode-syntax-table)
+    (modify-syntax-entry ?' "\"" abap-cds-mode-syntax-table)
+    (modify-syntax-entry ?_  "w" abap-cds-mode-syntax-table)
     ;; comments in ABAP CDS
-    (modify-syntax-entry ?\/ ". 124b")
-    (modify-syntax-entry ?* ". 23")
-    (modify-syntax-entry ?\n "> b")
+    (modify-syntax-entry ?\/ ". 124b" abap-cds-mode-syntax-table)
+    (modify-syntax-entry ?* ". 23" abap-cds-mode-syntax-table)
+    (modify-syntax-entry ?\n "> b" abap-cds-mode-syntax-table)
     abap-cds-mode-syntax-table)
   "Syntax table for ABAP CDS Mode")
 
