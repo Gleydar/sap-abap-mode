@@ -85,6 +85,15 @@
         (,abap-cds-keywords-regexp . font-lock-keyword-face)
         ))
 
+(defun abap-cds-syntax-propertize-annotation (start end)
+  (let ((case-fold-search nil))
+    (goto-char start)
+    (funcall
+     (syntax-propertize-rules
+      ("\\(^@.*\\)$" (0 "w")))
+     start end)
+     ))
+
 (defvar abap-cds-mode-syntax-table
   (let ((abap-cds-mode-syntax-table (make-syntax-table)))
     ;; set \" back to non-comment syntax TODO maybe remove
@@ -108,6 +117,7 @@
   ;; Code for syntax highlighting
   (setq-local font-lock-defaults '(abap-cds-font-lock-keywords nil nil))
   (setq-local indent-line-function 'abap-cds-indent-line)
+  (setq-local syntax-propertize-function 'abap-cds-syntax-propertize-annotation)
 
   (run-hooks 'abap-cds-mode-hook)
   )
