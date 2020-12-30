@@ -26,7 +26,7 @@
 (defvar abap-cds-mode-hook nil)
 
 (defcustom abap-cds-indent-level 2
-  "Indentation of ABAP CDS with respect to containing block."
+  "Indentation of ABAP CDS with respect to current scope."
   :type 'integer)
 
 (defun abap-cds-is-empty-line()
@@ -43,7 +43,7 @@
   (nth 4 (syntax-ppss)))
 
 (defun abap-cds-indent-line()
-  "Indent ABAP CDS Line"
+  "Indent line."
   (interactive)
   (let ((cur-indent 0))
     (save-excursion
@@ -66,9 +66,6 @@
       '(
         "DEFINE" "VIEW" "SELECT" "AS" "FROM" "ASSOCIATION" "PROJECTION" "ON" "WHERE" "NOT NULL"
         "KEY" "REDIRECTED" "TO" "LOCALIZED" "ENTITY" "ROOT" "PARENT" "COMPOSITION CHILD" "EXTEND"
-        ;; ABAP Dictionary (DDIC) - TODO maybe own major mode
-        ;; "DEFINE TABLE"
-        ;; "INCLUDE" "NOT NULL"
         ;; RAP
         "IMPLEMENTATION UNMANAGED" "IMPLEMENTATION MANAGED" "IMPLEMENTATION ABSTRACT" "MANAGED WITH ADDITIONAL SAVE"
         "BEHAVIOR FOR" "LATE NUMBERING" "PERSISTENT TABLE" "LOCK MASTER" "LOCK DEPENDENT"
