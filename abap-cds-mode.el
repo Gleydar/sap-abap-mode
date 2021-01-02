@@ -1,6 +1,6 @@
 ;;; abap-cds-mode.el --- ABAP CDS Major Mode    -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2020  Marian Piatkowski
+;; Copyright (C) 2020-  Marian Piatkowski
 
 ;; Author: Marian Piatkowski <marianpiatkowski@web.de>
 ;; Keywords: SAP ABAP CDS Mode, Emacs
