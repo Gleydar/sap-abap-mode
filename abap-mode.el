@@ -94,7 +94,7 @@
         "CREATE DATA"
         "CREATE OBJECT"
         "NEW"
-        "CAST"
+        "CAST" "CONV"
 
         ;; Calling and Exiting Program Units
         ;;; Calling Programs
@@ -144,7 +144,7 @@
         "SUBTRACT-CORRESPONDING"
         "UNPACK"
         ;;; Setting References
-        "ASSIGN"
+        "ASSIGN" "ASSIGN COMPONENT" "OF STRUCTURE"
         "UNASSIGN"
         "GET REFERENCE OF" "REF" "REFERENCE INTO"
         "CORRESPONDING"
@@ -245,6 +245,7 @@
         ;;; Data Consistency
         "AUTHORITY-CHECK"
         "COMMIT WORK"
+        "COMMIT WORK AND WAIT"
         "ROLLBACK WORK"
         "SET UPDATE TASK LOCAL"
 
