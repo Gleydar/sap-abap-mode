@@ -62,7 +62,6 @@
         "AT USER-COMMAND"
         "END-OF-PAGE"
         "GET"
-        "INITIALIZATION"
         "LOAD-OF-PROGRAM"
         "START-OF-SELECTION"
         "TOP-OF-PAGE"
@@ -390,7 +389,7 @@
 
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL") )
 (setq abap-constants '("SPACE" "ABAP_FALSE" "ABAP_TRUE"))
-(setq abap-events    '("START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
+(setq abap-events    '("INITIALIZATION" "START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
 (setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" ))
 
 ;; Generate regex string for each category
