@@ -356,15 +356,16 @@
         "INFOTYPES"
         "PROVIDE" "ENDPROVIDE"
 
-        ;; RAP
-        "TABLE FOR CREATE" "TABLE FOR UPDATE" "TABLE FOR DELETE"
+        ;; EML and RAP
+        "TYPE STRUCTURE FOR" "TYPE STRUCTURE FOR CREATE" "TYPE STRUCTURE FOR CHANGE"
+        "TYPE TABLE FOR" "TYPE TABLE FOR CREATE" "TYPE TABLE FOR CHANGE"
         "MAPPING FROM ENTITY"
 
         ;; Not Listed in Previous Section, But Somehow is Keyword
         ;; TODO Should be assembled in a regular expression form
         "FIELD-SYMBOL"
         "ASSIGNING"
-        "EQ" "LE" "LT" "GT" "GE" "NE"
+        "CA" "CN" "CO" "CP" "CS" "EQ" "GE" "GT" "LE" "LT" "NA" "NE"
         "IS" "INITIAL" "BOUND" "FOUND" "INSTANCE OF"
         "AND" "OR" "NOT" "IN"
         "USING" "CHANGING"
