@@ -93,7 +93,7 @@
 
 (defvar abap-cds-mode-syntax-table
   (let ((abap-cds-mode-syntax-table (make-syntax-table)))
-    ;; set \" back to non-comment syntax TODO maybe remove
+    ;; set \" back to non-comment syntax
     (modify-syntax-entry ?\" "w" abap-cds-mode-syntax-table)
     (modify-syntax-entry ?' "\"" abap-cds-mode-syntax-table)
     (modify-syntax-entry ?_  "w" abap-cds-mode-syntax-table)

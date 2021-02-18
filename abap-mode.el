@@ -364,7 +364,7 @@
         ;; Not Listed in Previous Section, But Somehow is Keyword
         ;; TODO Should be assembled in a regular expression form
         "FIELD-SYMBOL"
-        "ASSIGNING"
+        "ASSIGNING" "CASTING"
         "CA" "CN" "CO" "CP" "CS" "EQ" "GE" "GT" "LE" "LT" "NA" "NE"
         "IS" "INITIAL" "BOUND" "FOUND" "INSTANCE OF"
         "AND" "OR" "NOT" "IN"
