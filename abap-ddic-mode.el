@@ -52,20 +52,21 @@
           (while t
             (backward-up-list 1)
             (when (looking-at "[{]")
-              (setq cur-indent (+ cur-indent abap-cds-indent-level))))
+              (setq cur-indent (+ cur-indent abap-ddic-indent-level))))
         (error nil))) ; end save-excursion
     (save-excursion
       (back-to-indentation)
-      (cond ((abap-cds-in-comment-p) ; check for multiline comment block
+      (cond ((abap-ddic-in-comment-p) ; check for multiline comment block
              (setq cur-indent (+ cur-indent 1)))
-            ((and (looking-at "[}]") (>= cur-indent abap-cds-indent-level))
-             (setq cur-indent (- cur-indent abap-cds-indent-level)))))
+            ((and (looking-at "[}]") (>= cur-indent abap-ddic-indent-level))
+             (setq cur-indent (- cur-indent abap-ddic-indent-level)))))
     (indent-line-to cur-indent)))
 
 (setq abap-ddic-keywords
       '(
-        "DEFINE TABLE"
-        "INCLUDE" "NOT NULL"
+        "DEFINE TYPE" "DEFINE TABLE"
+        "KEY" "WITH FOREIGN KEY" "WITH VALUE HELP" "INCLUDE" "WITH SUFFIX" "NOT NULL"
+        "WHERE" "AND"
         ))
 (setq abap-ddic-keywords (append abap-ddic-keywords (mapcar 'downcase abap-ddic-keywords)))
 
@@ -82,8 +83,7 @@
     (funcall
      (syntax-propertize-rules
       ("\\(^@.*\\)$" (0 "w")))
-     start end)
-     ))
+     start end)))
 
 (defvar abap-ddic-mode-syntax-table
   (let ((abap-ddic-mode-syntax-table (make-syntax-table)))
@@ -106,7 +106,7 @@
 
   ;;; Search Based
   ;; Code for syntax highlighting
-  (setq-local font-lock-defaults '(abap-cds-font-lock-keywords nil nil))
+  (setq-local font-lock-defaults '(abap-ddic-font-lock-keywords nil nil))
   (setq-local indent-line-function 'abap-ddic-indent-line)
   (setq-local syntax-propertize-function 'abap-ddic-syntax-propertize-annotation)
 
