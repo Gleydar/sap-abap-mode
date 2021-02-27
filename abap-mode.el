@@ -99,7 +99,7 @@
         ;;; Calling Programs
         "CALL TRANSACTION"
         "LEAVE TO TRANSACTION"
-        "SUBMIT"
+        "SUBMIT" "AND RETURN"
         ;;; Calling Processing Blocks
         "CALL CUSTOMER-FUNCTION"
         "CALL FUNCTION"
@@ -157,10 +157,16 @@
         "DIVIDE"
         "MULTIPLY"
         "SUBTRACT"
+        "DIV"
+        "MOD"
         ;;; Character String and Byte String Processing
         "CONDENSE"
         "CONVERT"
         "FIND"
+        "FIND FIRST OCCURRENCE OF" "FIND FIRST OCCURRENCE OF SUBSTRING"  "FIND FIRST OCCURRENCE OF REGEX"
+        "FIND ALL OCCURRENCES OF" "FIND ALL OCCURRENCES OF SUBSTRING" "FIND ALL OCCURRENCES OF REGEX"
+        "IGNORING CASE" "RESPECTING CASE"
+        "MATCH COUNT" "MATCH OFFSET" "MATCH LENGTH"
         "GET BIT"
         "OVERLAY"
         "REPLACE"
@@ -391,7 +397,7 @@
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL") )
 (setq abap-constants '("SPACE" "ABAP_FALSE" "ABAP_TRUE"))
 (setq abap-events    '("INITIALIZATION" "START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
-(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" ))
+(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" "SUBSTRING" ))
 
 ;; Generate regex string for each category
 (setq abap-keywords-regexp  ( regexp-opt abap-keywords  'words))
