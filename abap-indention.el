@@ -30,9 +30,9 @@
   "Indentation of ABAP statements with respect to containing block."
   :type 'integer)
 
-(setq abap--keywords-open '("IF" "ELSEIF" "ELSE" "LOOP" "DO" "FORM" "CASE" "CLASS" "TRY" "CATCH" "METHOD" "BEGIN OF" "SELECT"))
+(setq abap--keywords-open '("IF" "ELSEIF" "ELSE" "LOOP" "DO" "FORM" "CASE" "CLASS" "TRY" "CATCH" "METHOD" "BEGIN OF" "SELECT" "INTERFACE"))
 
-(setq abap--keywords-close '("ENDIF" "ELSEIF" "ELSE" "ENDLOOP" "ENDDO" "ENDFORM" "ENDCASE" "ENDCLASS" "ENDTRY" "CATCH" "ENDMETHOD" "END OF" "ENDSELECT"))
+(setq abap--keywords-close '("ENDIF" "ELSEIF" "ELSE" "ENDLOOP" "ENDDO" "ENDFORM" "ENDCASE" "ENDCLASS" "ENDTRY" "CATCH" "ENDMETHOD" "END OF" "ENDSELECT" "ENDINTERFACE"))
 
 
 (defun abap-is-empty-line()

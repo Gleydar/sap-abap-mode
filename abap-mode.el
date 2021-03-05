@@ -187,7 +187,7 @@
         "COLLECT"
         "DELETE"
         "FIND IN TABLE"
-        "INSERT"
+        "INSERT" "INITIAL LINE"
         "LOOP AT" "ENDLOOP"
         "LOOP AT GROUP" "ENDLOOP"
         "AT"
@@ -389,6 +389,7 @@
         "FOR TESTING"
         "RISK LEVEL HARMLESS" "RISK LEVEL DANGEROUS" "RISK LEVEL CRITICAL"
         "DURATION SHORT" "DURATION MEDIUM" "DURATION LONG"
+        "MESSAGE-ID" "SHORTDUMP-ID"
         )) ;; end setq abap-keywords
 
 ;; we don't need this here as case-insensitivity is treated below (define-derived-mode)
