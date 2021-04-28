@@ -371,6 +371,7 @@
         ;; TODO Should be assembled in a regular expression form
         "FIELD-SYMBOL"
         "ASSIGNING" "CASTING"
+        "MOVE" "MOVE EXACT"
         "CA" "CN" "CO" "CP" "CS" "EQ" "GE" "GT" "LE" "LT" "NA" "NE"
         "IS" "INITIAL" "BOUND" "FOUND" "INSTANCE OF"
         "AND" "OR" "NOT" "IN"
@@ -395,7 +396,7 @@
 ;; we don't need this here as case-insensitivity is treated below (define-derived-mode)
 ;; (setq abap-keywords (append abap-keywords-open abap-keywords-close abap-keywords))
 
-(setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL") )
+(setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL" "DECFLOAT16" "DECFLOAT34") )
 (setq abap-constants '("SPACE" "ABAP_FALSE" "ABAP_TRUE"))
 (setq abap-events    '("INITIALIZATION" "START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
 (setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" "SUBSTRING" ))
