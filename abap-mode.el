@@ -81,7 +81,7 @@
         "EVENTS"
         "INTERFACE"
         "ENDINTERFACE"
-        "INTERFACES"
+        "INTERFACES" "PARTIALLY IMPLEMENTED"
         "METHODS"
         "PRIVATE SECTION"
         "PROTECTED SECTION"
