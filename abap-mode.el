@@ -392,6 +392,7 @@
         "RISK LEVEL HARMLESS" "RISK LEVEL DANGEROUS" "RISK LEVEL CRITICAL"
         "DURATION SHORT" "DURATION MEDIUM" "DURATION LONG"
         "MESSAGE-ID" "SHORTDUMP-ID"
+        "BY KERNEL MODULE"
         )) ;; end setq abap-keywords
 
 ;; we don't need this here as case-insensitivity is treated below (define-derived-mode)
