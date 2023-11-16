@@ -226,6 +226,7 @@
         "INDICATORS" "SET STRUCTURE" "NOT SET STRUCTURE"
         "INTERSECT DISTINCT" "EXCEPT DISTINCT" ;; "INTERSECT ALL" formally part of the SQL standard, but only implemented by one DB
         "EXTENDED RESULT"
+        "AS"
         ;;; Native SQL
         "EXEC SQL" "ENDEXEC" "EXIT FROM SQL"
         ;;; ABAP and HANA
@@ -401,7 +402,7 @@
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL" "DECFLOAT16" "DECFLOAT34") )
 (setq abap-constants '("SPACE" "ABAP_FALSE" "ABAP_TRUE"))
 (setq abap-events    '("INITIALIZATION" "START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
-(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" "SUBSTRING" ))
+(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" "SUBSTRING" "LINES" "LINE_EXISTS"))
 
 ;; Generate regex string for each category
 (setq abap-keywords-regexp  ( regexp-opt abap-keywords  'words))
