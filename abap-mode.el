@@ -376,14 +376,15 @@
         "MOVE" "MOVE EXACT"
         "CA" "CN" "CO" "CP" "CS" "EQ" "GE" "GT" "LE" "LT" "NA" "NE"
         "IS" "INITIAL" "BOUND" "FOUND" "INSTANCE OF"
-        "AND" "OR" "NOT" "IN"
+        "AND" "OR" "NOT" "IN" 
+        "LET"
         "USING" "CHANGING"
         "VALUE" "INTO"
         "WHERE" "ORDER BY" "ASCENDING" "DESCENDING" "GROUP BY" "HAVING"
         "TYPE" "LENGTH" "REF TO" "BY"
         "IMPLEMENTATION" "DEFINITION" "DEFERRED"
         "EXPORTING" "IMPORTING" "RETURNING" "OPTIONAL" "EXCEPTIONS"
-        "BEGIN OF" "END OF" "OCCURS" "BEGIN OF ENUM" "END OF ENUM" "BASE TYPE"
+        "BEGIN OF" "END OF" "OCCURS" "BEGIN OF ENUM" "END OF ENUM" "BASE TYPE" "MESH"
         "ADJACENT" "DUPLICATES" "FROM" "LINES"
         "WITH" "DEFAULT KEY" "UNIQUE KEY" "NON-UNIQUE KEY" "EMPTY KEY"
         "TRANSPORTING" "NO FIELDS"
@@ -402,7 +403,7 @@
 (setq abap-types    '("C" "I" "F" "STRING" "X" "XSTRING" "N" "P" "ABAP_BOOL" "DECFLOAT16" "DECFLOAT34") )
 (setq abap-constants '("SPACE" "ABAP_FALSE" "ABAP_TRUE"))
 (setq abap-events    '("INITIALIZATION" "START-OF-SELECTION" "AT SELECTION-SCREEN" "END-OF-SELECTION" "VERIFICATION-MESSAGE"))
-(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" "SUBSTRING" "LINES" "LINE_EXISTS"))
+(setq abap-functions '("STRLEN" "CONCATENATE" "CONDENSE" "SPLIT" "SUBSTRING" "LINES" "LINE_EXISTS" "LINE_INDEX" "BOOLC" "BOOLX" "XSDBOOL"))
 
 ;; Generate regex string for each category
 (setq abap-keywords-regexp  ( regexp-opt abap-keywords  'words))
